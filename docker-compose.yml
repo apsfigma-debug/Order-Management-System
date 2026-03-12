@@ -1,0 +1,22 @@
+services:
+  prosgres:
+    image: postgres:16-alpine
+    container_name: postgres-db
+    environment:
+      POSTGRES_DB : prosgres
+      POSTGRES_USER : postgres
+      POSTGRES_PASSWORD : postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./docker/init.sql:/docker-entrypoint-initdb.d/init.sql
+    networks:
+      - oms-network
+
+volumes:
+  postgres_data:
+
+networks:
+  oms-network:
+    driver: bridge
