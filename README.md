@@ -65,7 +65,7 @@ Command yang digunakan pada Product-Service ada
 - UpdateProductCommand : untuk mengubah data berdasarkan id
 
 ### 6. @Scope("Prototype")
-@Scope("Prototype") sangat penting karena tidak akan terjadinya overwrite pada data yang lain. Sehingga tidak akan terjadinya kebingungan pada data yang dikirimkan atau diterima.
+@Scope("Prototype") sangat penting karena tidak akan terjadinya overwrite request pada data yang lain. Sehingga tidak akan terjadinya kebingungan pada request yang dikirimkan atau diterima.
 
 ### 7. Mono, Non-Blocking, WebClient
 Mono dalam project reactor adalah memberikan nilai 0 atau 1 secara asynchronous dan nonblocking adalah membiarkan data dapat terus berjalan tanpa perlu menunggu data sebelumnya selesai. WebClient mencapai ini dengan melalui beberapa proses untuk dapat mencapai non-blocking.
